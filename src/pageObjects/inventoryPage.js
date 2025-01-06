@@ -1,34 +1,20 @@
+import inventoryHelper from "../core/inventoryPageHelper";
+
 class InventoryPage {
-    get itemPrice() {
-        return $('.inventory_item_price');
-    }
-
-    get addToCartButton() {
-        return $('#add-to-cart-sauce-labs-backpack');
-    }
-
-    get shoppingCartLink() {
-        return $('.shopping_cart_link');
-    }
-
-    get checkoutButton() {
-        return $('#checkout');
-    }
-
     async addItemToCart() {
-        await this.addToCartButton.click();
+        await inventoryHelper.addToCartButton.click();
     }
 
     async goToCart() {
-        await this.shoppingCartLink.click();
+        await inventoryHelper.shoppingCartLink.click();
     }
 
     async proceedToCheckout() {
-        await this.checkoutButton.click();
+        await inventoryHelper.checkoutButton.click();
     }
 
     async getItemPrice() {
-        return await this.itemPrice.getText();
+        return await inventoryHelper.itemPrice.getText();
     }
 }
 

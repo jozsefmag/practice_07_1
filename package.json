@@ -7,7 +7,7 @@
     "@wdio/mocha-framework": "^9.2.8"
   },
   "scripts": {
-    "test": "wdio run src/core/wdio.conf.js"
+    "test": "wdio run wdio.conf.js"
   },
   "dependencies": {
     "chai": "^5.1.2"
