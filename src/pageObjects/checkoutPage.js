@@ -34,9 +34,9 @@ class CheckoutPage {
     }
     
     async fillPersonalInfo(firstName, lastName, postalCode) {
-        await BasePage.setValue(this.firstNameField,firstName)
-        await BasePage.setValue(this.lastNameField,lastName)
-        await BasePage.setValue(this.postalCodeField,postalCode)
+        await BasePage.setFieldValues(this.firstNameField,firstName)
+        await BasePage.setFieldValues(this.lastNameField,lastName)
+        await BasePage.setFieldValues(this.postalCodeField,postalCode)
         await BasePage.clickElement(this.continueButton)
     }
 

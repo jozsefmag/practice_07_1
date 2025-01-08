@@ -14,8 +14,8 @@ class LoginPage{
     }
     
     async login(username, password) {
-        await BasePage.setValue(this.userNameField, username);
-        await BasePage.setValue(this.passwordField,password);
+        await BasePage.setFieldValues(this.userNameField, username);
+        await BasePage.setFieldValues(this.passwordField,password);
         await BasePage.clickElement(this.loginButton);
     }
 

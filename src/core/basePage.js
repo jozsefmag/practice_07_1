@@ -4,24 +4,12 @@ class BasePage{
         await browser.url(url);
     }
     
-    async setValue(selector, value) {
-        let element;
-        if (typeof selector === 'string') {
-            element = await $(selector);  
-        } else {
-            element = selector;  
-        }
-        await element.setValue(value);  
+    async setFieldValues(selector, value) {
+        await selector.setValue(value);  
     }
     
     async clickElement(selector) {
-        let element;
-        if (typeof selector === 'string') {
-            element = await $(selector);
-        } else {
-            element = selector;
-        }
-        await element.click();
+        await selector.click();
     }
 
     async getText(selector) {
