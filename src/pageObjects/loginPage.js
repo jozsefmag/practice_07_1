@@ -1,9 +1,22 @@
-import basePage from '../core/basepage'
-class LoginPage {
+import BasePage from '../core/basePage'
+class LoginPage{
+
+    get userNameField() {
+        return $('#user-name');
+    }
+
+    get passwordField() {
+        return $('#password');
+    }
+
+    get loginButton() {
+        return $('#login-button');
+    }
+    
     async login(username, password) {
-        await basePage.userNameField.setValue(username);
-        await basePage.passwordField.setValue(password);
-        await basePage.loginButton.click();
+        await BasePage.setValue(this.userNameField, username);
+        await BasePage.setValue(this.passwordField,password);
+        await BasePage.clickElement(this.loginButton);
     }
 
     async getPageTitle() {

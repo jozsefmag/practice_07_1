@@ -7,9 +7,15 @@
     "@wdio/mocha-framework": "^9.2.8"
   },
   "scripts": {
-    "test": "wdio run wdio.conf.js"
+    "test": "wdio run src/core/wdio.conf.js"
   },
   "dependencies": {
-    "chai": "^5.1.2"
-  }
+    "chai": "^5.1.2",
+    "webdriverio": "^9.5.1"
+  },
+  "version": "1.0.0",
+  "main": "wdio.conf.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

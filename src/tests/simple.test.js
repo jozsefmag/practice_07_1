@@ -1,7 +1,7 @@
 import loginPage from '../pageObjects/loginPage';
 import inventoryPage from '../pageObjects/inventoryPage';
 import checkoutPage from '../pageObjects/checkoutPage';
-import basePage from '../core/basepage';
+import BasePage from '../core/basePage';
 
 import { expect,assert, should } from 'chai';
 should()
@@ -9,7 +9,7 @@ should()
 
 describe("Sauce Demo E2E Test", () => {
     before(async () => {
-        await basePage.openPage();
+        await BasePage.openPage();
     });
 
     it('Check page title', async () => {

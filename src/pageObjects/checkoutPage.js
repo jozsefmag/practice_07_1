@@ -1,27 +1,59 @@
-import checkoutHelper from "../core/checkoutHelper";
+import BasePage from "../core/basePage";
 class CheckoutPage {
+
+    get firstNameField() {
+        return $('#first-name');
+    }
+
+    get lastNameField() {
+        return $('#last-name');
+    }
+
+    get postalCodeField() {
+        return $('#postal-code');
+    }
+
+    get continueButton() {
+        return $('#continue');
+    }
+
+    get itemName() {
+        return $('.inventory_item_name');
+    }
+
+    get totalLabel() {
+        return $('.summary_total_label');
+    }
+
+    get finishButton() {
+        return $('#finish');
+    }
+
+    get backHomeButton() {
+        return $('#back-to-products');
+    }
     
     async fillPersonalInfo(firstName, lastName, postalCode) {
-        await checkoutHelper.firstNameField.setValue(firstName);
-        await checkoutHelper.lastNameField.setValue(lastName);
-        await checkoutHelper.postalCodeField.setValue(postalCode);
-        await checkoutHelper.continueButton.click();
+        await BasePage.setValue(this.firstNameField,firstName)
+        await BasePage.setValue(this.lastNameField,lastName)
+        await BasePage.setValue(this.postalCodeField,postalCode)
+        await BasePage.clickElement(this.continueButton)
     }
 
     async finishShopping() {
-        await checkoutHelper.finishButton.click();
+        await BasePage.clickElement(this.finishButton)
     }
 
     async backToProducts() {
-        await checkoutHelper.backHomeButton.click();
+        await BasePage.clickElement(this.backHomeButton)
     }
 
     async getItemName() {
-        return await checkoutHelper.itemName.getText();
+        return await BasePage.getText(this.itemName)
     }
 
     async getTotalPrice() {
-        return await checkoutHelper.totalLabel.getText();
+        return await BasePage.getText(this.totalLabel)
     }
 }
 
