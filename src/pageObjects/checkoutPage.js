@@ -1,36 +1,36 @@
-import BasePage from "../core/basePage";
+import BasePage from "../core/basePage"
 class CheckoutPage {
 
     get firstNameField() {
-        return $('#first-name');
+        return $('#first-name')
     }
 
     get lastNameField() {
-        return $('#last-name');
+        return $('#last-name')
     }
 
     get postalCodeField() {
-        return $('#postal-code');
+        return $('#postal-code')
     }
 
     get continueButton() {
-        return $('#continue');
+        return $('#continue')
     }
 
     get itemName() {
-        return $('.inventory_item_name');
+        return $('.inventory_item_name')
     }
 
     get totalLabel() {
-        return $('.summary_total_label');
+        return $('.summary_total_label')
     }
 
     get finishButton() {
-        return $('#finish');
+        return $('#finish')
     }
 
     get backHomeButton() {
-        return $('#back-to-products');
+        return $('#back-to-products')
     }
     
     async fillPersonalInfo(firstName, lastName, postalCode) {
@@ -57,4 +57,4 @@ class CheckoutPage {
     }
 }
 
-export default new CheckoutPage();
+export default new CheckoutPage()

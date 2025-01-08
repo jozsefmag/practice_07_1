@@ -1,19 +1,19 @@
-import BasePage from "../core/basePage";
+import BasePage from "../core/basePage"
 class InventoryPage {
     get itemPrice() {
-        return $('.inventory_item_price');
+        return $('.inventory_item_price')
     }
 
     get addToCartButton() {
-        return $('#add-to-cart-sauce-labs-backpack');
+        return $('#add-to-cart-sauce-labs-backpack')
     }
 
     get shoppingCartLink() {
-        return $('.shopping_cart_link');
+        return $('.shopping_cart_link')
     }
 
     get checkoutButton() {
-        return $('#checkout');
+        return $('#checkout')
     }
 
     async addItemToCart() {
@@ -30,8 +30,8 @@ class InventoryPage {
     }
 
     async getItemPrice() {
-        return await BasePage.getText(this.itemPrice);
+        return await BasePage.getText(this.itemPrice)
     }
 }
 
-export default new InventoryPage();
+export default new InventoryPage()
