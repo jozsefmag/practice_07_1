@@ -17,7 +17,9 @@
   "scripts": {
     "test": "wdio run src/core/config/wdio.conf.js",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "prettier:write": "prettier . --write",
+    "prettier:check": "prettier . --check"
   },
   "dependencies": {
     "chai": "^5.1.2",
